@@ -28,10 +28,29 @@ cd jiantang
 # 创建应用，应用名称（jtapp）不要和项目名称一样
 python manage.py startapp jtapp
 
-# 运行开发服务器
+# 运行开发服务器，运行成功通过 http://127.0.0.1:8000/ 访问
 python manage.py runserver
 
+
+
 ```
+
+
+## 补充相关文件
+
+
+## 运行
+
+```bash
+# 数据迁移
+
+python manage.py migrate
+
+# 创建管理员（后台）
+python manage.py createsuperuser
+
+```
+
 
 ## pip
 

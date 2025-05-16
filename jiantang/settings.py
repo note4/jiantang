@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jtapp', # Add this line with your app's name
+    # ... other apps you might have
 ]
 
 MIDDLEWARE = [

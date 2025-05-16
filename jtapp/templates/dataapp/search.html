@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔬果含糖/升糖指数查询</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        form { margin-bottom: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #f4f4f4; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
+        strong { color: #333; }
+    </style>
+</head>
+<body>
+    <h1>蔬果含糖/升糖指数查询</h1>
+
+    <form method="GET" action="{% url 'search_fruit_veggie' %}">
+        <label for="query">输入蔬果名称:</label>
+        <input type="text" id="query" name="q" value="{{ query|default:'' }}">
+        <button type="submit">查询</button>
+    </form>
+
+    {% if query and not results %} {# 如果用户进行了查询但没有找到结果 #}
+        <p>没有找到 "{{ query }}" 的相关数据。</p>
+    {% elif results %} {# 如果找到了结果 #}
+        <h2>查询结果：</h2>
+        <ul>
+            {% for item in results %} {# 遍历查询结果列表 #}
+                <li>
+                    <strong>{{ item.name }}</strong>:
+                    含糖量: {{ item.sugar_content }} 克/100克,
+                    升糖指数: {{ item.gi_index }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+</body>
+</html>

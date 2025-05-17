@@ -1,3 +1,4 @@
+# jtapp/admin/import_export.py
 import csv
 from io import StringIO
 from django.core.files.uploadedfile import UploadedFile
@@ -25,6 +26,7 @@ def import_fruitveggie_from_file(file: UploadedFile):
                     name=row.get('name', '').strip(),
                     defaults={
                         'name_en': row.get('name_en', '').strip(),
+                        'category': row.get('category', '').strip(),  # 如果是字符串
                         'sugar_content': float(row.get('sugar_content', 0)),
                         'gi_index': float(row.get('gi_index', 0)),
                     }
@@ -50,9 +52,9 @@ def export_fruitveggie_as_csv(queryset, filename):
 
     writer = csv.writer(response)
     # 写入 CSV 文件头
-    writer.writerow(['name', 'name_en', 'sugar_content', 'gi_index'])
+    writer.writerow(['name', 'name_en', 'category',  'sugar_content', 'gi_index'])
     # 写入每一条数据
     for obj in queryset:
-        writer.writerow([obj.name, obj.name_en, obj.sugar_content, obj.gi_index])
+        writer.writerow([obj.name, obj.name_en, obj.category, obj.sugar_content, obj.gi_index])
 
     return response

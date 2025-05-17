@@ -8,6 +8,7 @@ from django import forms
 from jtapp.models import FruitVeggie
 from .import_export import import_fruitveggie_from_file, export_fruitveggie_as_csv
 
+from django.utils.translation import gettext_lazy as _
 
 class UploadFileForm(forms.Form):
     # 上传表单，支持 CSV 或 Excel
@@ -16,8 +17,9 @@ class UploadFileForm(forms.Form):
 
 @admin.register(FruitVeggie)
 class FruitVeggieAdmin(admin.ModelAdmin):
-    list_display = ('name', 'name_en', 'sugar_content', 'gi_index')
+    list_display = ('name', 'name_en', 'category', 'sugar_content', 'gi_index')
     search_fields = ('name', 'name_en')
+    list_filter = ('category',)  # 添加类别筛选
     actions = ['export_selected_as_csv']
 
     def get_urls(self):

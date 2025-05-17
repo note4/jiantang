@@ -5,6 +5,10 @@
 ```bash
 python --version
 
+## 升级 python
+brew install python
+
+
 ```
 
 ```bash
@@ -99,3 +103,9 @@ python manage.py migrate
 python manage.py createsuperuser
 
 ```
+
+
+
+账号密码
+admin
+admin

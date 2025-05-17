@@ -1,4 +1,4 @@
-
+# jtapp/apps.py
 from django.db import models
 
 # 定义蔬果模型

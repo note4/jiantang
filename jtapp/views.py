@@ -10,9 +10,11 @@ def search_fruit_veggie(request):
     results = [] # 初始化结果列表
 
     if query: # 如果用户输入了查询内容
-        # 使用 filter 进行查询，name__icontains 表示不区分大小写地包含查询字符串
-        results = FruitVeggie.objects.filter(name__icontains=query)
-        # 如果需要精确匹配，可以使用 name__iexact=query
+        # 使用 filter 进行查询，Q 对象实现对中文名和英文名的模糊匹配
+        results = FruitVeggie.objects.filter(
+            Q(name__icontains=query) | Q(name_en__icontains=query)
+        )
+        # 如果需要精确匹配，可以使用 name__iexact=query 或 name_en__iexact=query
 
     # 渲染 search.html 模板，并将结果和查询字符串传递给模板
     return render(request, 'dataapp/search.html', {'results': results, 'query': query})

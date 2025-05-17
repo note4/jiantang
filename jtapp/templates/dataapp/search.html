@@ -28,8 +28,9 @@
         <ul>
             {% for item in results %} {# 遍历查询结果列表 #}
                 <li>
-                    <strong>{{ item.name }}</strong>:
-                    含糖量: {{ item.sugar_content }} 克/100克,
+                    <h3>{{ item.name }}</h3>
+                    含糖量（每100克）: {{ item.sugar_content }} 
+                    <br/>
                     升糖指数: {{ item.gi_index }}
                 </li>
             {% endfor %}

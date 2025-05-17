@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    {% if custom_buttons %}
+        {% for btn in custom_buttons %}
+            <li>
+                <a href="{{ btn.url }}" class="addlink">{{ btn.label }}</a>
+            </li>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

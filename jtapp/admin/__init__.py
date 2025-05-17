@@ -1,0 +1,1 @@
+from .fruitveggie import FruitVeggieAdmin

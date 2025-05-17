@@ -1,0 +1,31 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}导入蔬果数据{% endblock %}
+
+{% block content %}
+<div class="app-import">
+    <h1>导入蔬果数据</h1>
+
+    {% if messages %}
+        <ul class="messagelist">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+        {% csrf_token %}
+        <p><strong>支持文件格式：</strong>CSV, Excel (.xls, .xlsx), JSON</p>
+        <p>
+            <label for="file">选择文件：</label>
+            <input type="file" name="file" id="file" required>
+        </p>
+        <button type="submit" class="default">导入</button>
+    </form>
+
+    <p style="margin-top: 40px;">
+        <a href="{% url 'admin:fruitveggie-export-all' %}" class="button">导出所有蔬果数据</a>
+    </p>
+</div>
+{% endblock %}

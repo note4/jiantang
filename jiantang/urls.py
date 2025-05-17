@@ -1,3 +1,5 @@
+# jiantang/urls.py
+
 """
 URL configuration for jiantang project.
 

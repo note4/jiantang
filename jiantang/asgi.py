@@ -1,3 +1,4 @@
+# jiantang/asgi.py
 """
 ASGI config for jiantang project.
 

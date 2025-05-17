@@ -1,3 +1,4 @@
+# jiantang/settings.py
 """
 Django settings for jiantang project.
 

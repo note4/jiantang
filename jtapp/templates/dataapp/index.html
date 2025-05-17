@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔬果识别与查询</title>
+    <link rel="stylesheet" href="/static/css/fruit-recognition.css">
+</head>
+<body>
+    <h1>蔬果识别与查询</h1>
+    
+    <div class="error-message" id="errorMessage"></div>
+    
+    <div class="upload-container" id="dropZone">
+        <input type="file" id="fileInput" accept="image/*">
+        <button class="button" onclick="document.getElementById('fileInput').click()">
+            选择图片
+        </button>
+        <p>或将图片拖放到这里</p>
+    </div>
+
+    <img id="imagePreview" alt="预览">
+    
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p id="loadingText">正在加载模型...</p>
+    </div>
+
+    <div id="result"></div>
+    <div id="debug"></div>
+
+    <!-- 引入依赖库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/idb@7/build/umd.js"></script>
+    
+    <!-- 引入配置和工具类 -->
+    <script src="/static/js/labels.js"></script>
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/model-cache.js"></script>
+    <script src="/static/js/utils.js"></script>
+    
+    <!-- 引入主要逻辑 -->
+    <script src="/static/js/fruit-recognition.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+{
+    "labels": {
+        "fruits": {
+            "apple": {
+                "cn": "苹果",
+                "varieties": {
+                    "red_delicious": "红蛇果",
+                    "fuji": "富士苹果",
+                    "gala": "嘎啦苹果",
+                    "golden_delicious": "金冠苹果",
+                    "granny_smith": "青苹果",
+                    "honeycrisp": "蜜脆苹果",
+                    "mcintosh": "麦金托什苹果",
+                    "pink_lady": "粉红女士苹果",
+                    "braeburn": "布雷伯恩苹果"
+                }
+            },
+            "banana": {
+                "cn": "香蕉",
+                "varieties": {
+                    "cavendish": "卡文迪什香蕉",
+                    "plantain": "芭蕉",
+                    "lady_finger": "米蕉",
+                    "red": "红香蕉"
+                }
+            },
+            "orange": {
+                "cn": "橙子",
+                "varieties": {
+                    "navel": "脐橙",
+                    "valencia": "瓦伦西亚橙",
+                    "blood": "血橙",
+                    "mandarin": "柑橘"
+                }
+            },
+            "grape": {
+                "cn": "葡萄",
+                "varieties": {
+                    "red": "红葡萄",
+                    "green": "青葡萄",
+                    "concord": "康科德葡萄",
+                    "wine": "酿酒葡萄"
+                }
+            },
+            "strawberry": {
+                "cn": "草莓",
+                "varieties": {
+                    "garden": "园艺草莓",
+                    "wild": "野生草莓",
+                    "alpine": "高山草莓"
+                }
+            },
+            "pear": {
+                "cn": "梨",
+                "varieties": {
+                    "asian": "雪梨",
+                    "bartlett": "巴特利特梨",
+                    "bosc": "波士克梨"
+                }
+            },
+            "peach": {
+                "cn": "桃子",
+                "varieties": {
+                    "yellow": "黄桃",
+                    "white": "白桃",
+                    "nectarine": "油桃"
+                }
+            },
+            "plum": {
+                "cn": "李子",
+                "varieties": {
+                    "red": "红李子",
+                    "yellow": "黄李子",
+                    "damson": "西梅"
+                }
+            },
+            "cherry": {
+                "cn": "樱桃",
+                "varieties": {
+                    "sweet": "甜樱桃",
+                    "sour": "酸樱桃",
+                    "black": "黑樱桃"
+                }
+            },
+            "mango": {
+                "cn": "芒果",
+                "varieties": {
+                    "alphonso": "阿方索芒果",
+                    "ataulfo": "亚特芒果",
+                    "kent": "肯特芒果"
+                }
+            },
+            "pineapple": {
+                "cn": "菠萝",
+                "varieties": {
+                    "smooth_cayenne": "凤梨",
+                    "queen": "皇后菠萝"
+                }
+            }
+        },
+        "vegetables": {
+            "tomato": {
+                "cn": "番茄",
+                "varieties": {
+                    "cherry": "樱桃番茄",
+                    "roma": "罗马番茄",
+                    "beefsteak": "牛排番茄",
+                    "heirloom": "祖传番茄"
+                }
+            },
+            "potato": {
+                "cn": "土豆",
+                "varieties": {
+                    "russet": "褐皮土豆",
+                    "red": "红皮土豆",
+                    "yukon_gold": "育空金土豆"
+                }
+            },
+            "cucumber": {
+                "cn": "黄瓜",
+                "varieties": {
+                    "english": "英国黄瓜",
+                    "persian": "波斯黄瓜",
+                    "pickling": "腌制黄瓜"
+                }
+            },
+            "carrot": {
+                "cn": "胡萝卜",
+                "varieties": {
+                    "orange": "橙胡萝卜",
+                    "purple": "紫胡萝卜",
+                    "yellow": "黄胡萝卜"
+                }
+            },
+            "pepper": {
+                "cn": "辣椒",
+                "varieties": {
+                    "bell": "甜椒",
+                    "jalapeno": "墨西哥辣椒",
+                    "cayenne": "卡宴辣椒"
+                }
+            },
+            "broccoli": {
+                "cn": "西兰花",
+                "varieties": {
+                    "crown": "头状西兰花",
+                    "romanesco": "罗马花椰菜",
+                    "sprouting": "抽苔西兰花"
+                }
+            },
+            "cabbage": {
+                "cn": "卷心菜",
+                "varieties": {
+                    "green": "绿卷心菜",
+                    "red": "紫卷心菜",
+                    "napa": "大白菜"
+                }
+            },
+            "eggplant": {
+                "cn": "茄子",
+                "varieties": {
+                    "italian": "意大利茄子",
+                    "chinese": "中国茄子",
+                    "japanese": "日本茄子"
+                }
+            }
+        }
+    },
+    "model_mapping": {
+        "948": "apple/red_delicious",
+        "949": "apple/granny_smith",
+        "950": "apple/fuji",
+        "951": "apple/gala",
+        "952": "apple/golden_delicious",
+        "953": "apple/honeycrisp",
+        "954": "banana/cavendish",
+        "955": "banana/plantain",
+        "956": "orange/navel",
+        "957": "orange/valencia",
+        "958": "grape/red",
+        "959": "grape/green",
+        "960": "strawberry/garden",
+        "961": "pear/asian",
+        "962": "pear/bartlett",
+        "963": "peach/yellow",
+        "964": "plum/red",
+        "965": "cherry/sweet",
+        "966": "mango/alphonso",
+        "967": "pineapple/smooth_cayenne",
+        "968": "tomato/beefsteak",
+        "969": "potato/russet",
+        "970": "cucumber/english",
+        "971": "carrot/orange",
+        "972": "pepper/bell",
+        "973": "broccoli/crown",
+        "974": "cabbage/green",
+        "975": "eggplant/chinese"
+    }
+}

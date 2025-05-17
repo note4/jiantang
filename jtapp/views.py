@@ -4,18 +4,6 @@ from django.shortcuts import render
 from .models import FruitVeggie
 from django.db.models import Q # 导入 Q 对象，用于复杂的查询条件（这里用不到，但了解一下很好）
 
-from django.http import JsonResponse
-import json
-import os
-
-def get_labels(request):
-    try:
-        labels_path = os.path.join(os.path.dirname(__file__), 'data', 'fruit_labels.json')
-        with open(labels_path, 'r', encoding='utf-8') as f:
-            labels = json.load(f)
-        return JsonResponse(labels)
-    except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
         
 # 首页图片识别
 def index(request):
@@ -39,4 +27,34 @@ def search_fruit_veggie(request):
         'results': results,
         'query': query
     })
+
+
+
+from django.http import JsonResponse
+import json
+import os
+
+def get_labels(request):
+    try:
+        labels_path = os.path.join(os.path.dirname(__file__), 'data', 'fruit_labels.json')
+        with open(labels_path, 'r', encoding='utf-8') as f:
+            labels = json.load(f)
+        return JsonResponse(labels)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
+
+        
+
+from django.utils import translation
+from django.conf import settings
+from django.http import HttpResponseRedirect
+
+def set_language(request):
+    lang = request.GET.get('lang', settings.LANGUAGE_CODE)
+    response = HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+    if lang in dict(settings.LANGUAGES):
+        translation.activate(lang)
+        request.session[translation.LANGUAGE_SESSION_KEY] = lang
+    return response
+
 

@@ -84,7 +84,7 @@ python manage.py startapp jtapp
 ```bash
 # 运行开发服务器，运行成功通过 http://127.0.0.1:8000/ 访问
 python manage.py runserver
-# 如果迁移系统需要重新安装 django 和 django-admin
+# 如果换了个系统需要重新安装 django 和 django-admin
 
 ```
 

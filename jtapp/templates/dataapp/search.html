@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>蔬果含糖/升糖指数查询</title>
+    <title>蔬果含糖和升糖指数查询</title>
     <style>
         /* 基础排版 */
         body {
@@ -133,7 +133,7 @@
     </style>
 </head>
 <body>
-    <h1>蔬果含糖/升糖指数查询</h1>
+    <h1>蔬果含糖和升糖指数查询</h1>
 
     <form method="GET" action="{% url 'search_fruit_veggie' %}">
         <label for="query">输入蔬果名称:</label>
@@ -149,7 +149,7 @@
             {% for item in results %} {# 遍历查询结果列表 #}
                 <li>
                     <h3>{{ item.name }}</h3>
-                    <div>含糖量（每100克）：<strong>{{ item.sugar_content }}</strong></div>
+                    <div>含糖量（每100克）：<strong>{{ item.sugar_content }}</strong> 克</div>
                     <div>升糖指数：<strong>{{ item.gi_index }}</strong></div>
                 </li>
             {% endfor %}

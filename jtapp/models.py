@@ -9,12 +9,11 @@ class FruitVeggie(models.Model):
         ('fruit', '水果'),
     ]
     # 蔬果名称，确保唯一性
-    name = models.CharField(max_length=100, verbose_name="名称（中文）")
-    # 英文名称
-    name_en = models.CharField(max_length=100, verbose_name="名称（英文）", null=True, blank=True)
-    
-    category = models.CharField('类别', max_length=10, choices=CATEGORY_CHOICES)  # 新添加的字段
-
+    name = models.CharField(max_length=100, verbose_name="名称")
+    # 蔬果英文名称
+    name_en = models.CharField(max_length=100, verbose_name="英文名称", null=True, blank=True)
+    # 蔬果类别 vegetable, fruit
+    category = models.CharField('类别', max_length=10, choices=CATEGORY_CHOICES)
     # 含糖量，使用 DecimalField 保证精度
     sugar_content = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="含糖量 (每100克)")
     # 升糖指数，使用 DecimalField

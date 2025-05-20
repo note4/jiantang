@@ -16,7 +16,7 @@ class FruitVeggie(models.Model):
     category = models.CharField('类别', max_length=10, choices=CATEGORY_CHOICES)
     # 含糖量，使用 DecimalField 保证精度
     sugar_content = models.DecimalField(max_digits=5, decimal_places=2, verbose_name="含糖量 (每100克)")
-    # 升糖指数，使用 DecimalField
+    # 升糖指数，使用 DecimalField 保证精度
     gi_index = models.DecimalField(max_digits=4, decimal_places=1, verbose_name="升糖指数 (GI)")
 
 
